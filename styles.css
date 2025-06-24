@@ -85,6 +85,7 @@
 
   .nav-menu ul.active {
     display: flex;
+    flex-direction: row;
   }
 
   .nav-menu li {
