@@ -369,7 +369,9 @@ footer.footer-alt {
   padding: 0;
   margin: 0;
 }
-
+li{
+  color: #f0f0f0;
+}
 .contact-list li {
   margin-bottom: 10px;
   font-size: 16px;
