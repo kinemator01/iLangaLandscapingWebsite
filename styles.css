@@ -1,91 +1,127 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #3b7a3b; /* Dark green background */
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.menu .logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  line-height: 1.2;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navigation menu styles */
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;;
+}
+
+.nav-menu li a button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-menu li a button:hover {
+  background-color: rgb(2, 250, 2);
+  color: #000000;
+}
+
+/* Hamburger menu toggle */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+ /* user-select: none;*/
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap;
+  }
+
+  .menu .logo {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* Hidden by default */
+    margin-top: 10px;
+  }
+
+  .nav-menu ul.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    text-align: center;
+    margin: 8px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
 body{
     background-color:#315431; 
     width: 100%;
-   
-    margin: 0;
+    padding-top: 80px;
+   margin: 0;
    
    
 }
 
 h1{
-    color: #050505;
-    font-family: sans-serif;
-    text-align: center;;
-    border-color: rgb(30, 110, 33);
-    width: 400px;
-    height: 40px;
-    font-size: 50px;
-    padding-top: 15px;
-}
-
-
-button{
-  padding: 10px;
-    color: rgb(0, 0, 0);
-    font-family: sans-serif;
-    border-width: 2px;
-    border-style: solid;
-    margin: 5px;
-    text-align: center;
-    cursor: pointer;
-    position: fixed;
-     background-color: #309641;
-  height: 40px;
-  width: 80px;
-  border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-button:hover{
- background-color: rgb(72, 255, 0);
-   transform: scale(1.5);
-}
-li{
- display: inline-block; 
-  text-align: center;
-  gap: 40px;
-  padding-left: 100px;
-
-}
-
-.menu{
-  padding-left: 300px;
-  text-align: center;
-  transform: translateY(-200px);
-  position: fixed;
-}
-
-h1:hover{
-    transform: scale(1.5);
-}
-.logo {
-
-  animation: float 4s ease-in-out infinite;
-  font-size: 80px;
-  text-align: center;
   color: #ffffff;
+  font-size: 70px;
+  text-align: center;
   font-family: sans-serif;
-  padding-left: 150px;
-  padding-top: 40px;
-  
+  padding-top: 20px;
 }
 
-@keyframes float {
+
+
+/*@keyframes float {
   0%   { transform: translateY(-15px); }
   50%  { transform: translateY(15px); }
   100% { transform: translateY(-15px); }
-}
-
-.welcome_page{
-  width: 100%;
-  height: 100px;
-  display: flex;
-  background-color: #315431;
-  flex-direction: column;
-  align-items: center; 
- 
-
-}
+}*/
 
 .welcome-text{
   background-color: #315431;
@@ -96,6 +132,8 @@ h1:hover{
   width: 700px;
   text-align: center;
   padding: 20px;
+  display: flex;
+  flex-direction: row;
 }
 h2{
  color:#ffffff;
@@ -156,17 +194,13 @@ img:hover{
 
 
 
-
 .first_images{
   display:grid;
      grid-template-columns: 1fr 1fr 1fr; 
     gap: auto;
     margin: auto;
     text-align: center;
-    
 }
- 
-
 
 .image{
   background-color:#315431 ;  /*#315431*/
@@ -182,6 +216,22 @@ img:hover{
       text-align: center;
       font-family: sans-serif;
     }
+    
+    .images-section{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background-color: #315431;
+    }
+
+    .images-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
 
     .services-section h1 {
       font-size: 10px;
@@ -195,7 +245,7 @@ img:hover{
       justify-content: center;
       gap: 20px;
     }
-
+   
     .service-card {
       background-color: white;
       padding: 20px 30px;
@@ -227,72 +277,166 @@ img:hover{
       text-align: left;
     }
 
-    .about-page-div{
-        width:100%;
-        display:grid;
-        grid-template-columns: 1fr 1fr ; 
-        gap: 20px;
-    }
-   
-
-
-    .footer-alt {
-      background-color: #202921;
-      color: white;
-      padding: 50px 20px 20px;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .footer-content {
-      display: flex;
+    .about-container{
+    display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 40px;
-      max-width: 1000px;
-      margin: auto;
+      justify-content: center;
+      gap: 20px;
     }
 
-    .footer-left,
-    .footer-right {
-      flex: 1 1 300px;
+   .about_video{
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
     }
 
-    .footer-left h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
+    .about_video video {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
     }
 
-    .footer-left p {
+    .about_video h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #315431;
+      margin-top: 10px;
+    }
+
+    .about_video p {
+      text-align: center;
       font-size: 1rem;
-      line-height: 1.6;
-      color: #dcedc8;
-    }
-
-    .footer-right h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
+      color: #444;
     }
 
     .contact-list {
-      list-style: none;
-      padding: 0;
-      font-size: 1rem;
-      line-height: 2;
-    }
+  list-style: none;       /* Remove bullets */
+  padding: 0;
+  margin: 0;
+  display: block;         /* Ensures vertical stacking */
+}
 
-    .contact-list li a {
-      color: #a5d6a7;
-      text-decoration: none;
-    }
+.contact-list li {
+  margin-bottom: 10px;    /* Space between items */
+  font-size: 1rem;
+}
 
-    .contact-list li a:hover {
-      text-decoration: underline;
-      color: #ffffff;
-    }
+.contact-list a {
+  color: inherit;         /* Keep the color same as text */
+  text-decoration: none;
+}
 
-    .footer-bottom {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+footer.footer-alt {
+  background-color: #f2f2f2;
+  padding: 40px 20px;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-content h2 {
+  margin-top: 0;
+  font-size: 28px;
+  color: #2c3e50;
+}
+
+.footer-content p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.footer-content h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.contact-list a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+footer.footer-alt {
+  background-color: #545151;
+  padding: 40px 20px;
+  color: #565555;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-content h2 {
+  margin-top: 0;
+  font-size: 28px;
+  color: #f6f8fa;
+}
+
+.footer-content p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.footer-content h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.contact-list a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #ffffff;
+}
