@@ -322,6 +322,7 @@ img:hover{
 .contact-list li {
   margin-bottom: 10px;    /* Space between items */
   font-size: 1rem;
+  color: #f0f0f0;
 }
 
 .contact-list a {
