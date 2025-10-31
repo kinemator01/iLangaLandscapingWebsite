@@ -134,7 +134,7 @@ h2 {
   text-align: center;
 }
 .services-section h2 {
-  color: black; /* or black if you want */
+  color: #f0f0f0; /* or black if you want */
   font-size: 38px;
   margin-bottom: 40px;
 }
@@ -371,5 +371,6 @@ footer.footer-alt {
     max-width: 280px;
   }
 }
+
 
 
