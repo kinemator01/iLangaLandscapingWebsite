@@ -133,7 +133,11 @@ h2 {
   background-color: #f8f8f8;
   text-align: center;
 }
-
+.services-section h2 {
+  color: #315431; /* or black if you want */
+  font-size: 38px;
+  margin-bottom: 40px;
+}
 .services-container {
   display: flex;
   flex-wrap: wrap;
@@ -367,3 +371,4 @@ footer.footer-alt {
     max-width: 280px;
   }
 }
+
