@@ -133,11 +133,11 @@ h2 {
   background-color: #315431;
   text-align: center;
 }
-.services-section h2 {
+/*.services-section h2 {
   color: #f0f0f0; 
   font-size: 38px;
   margin-bottom: 40px;
-}
+} */
 .services-container {
   display: flex;
   flex-wrap: wrap;
@@ -371,6 +371,7 @@ footer.footer-alt {
     max-width: 280px;
   }
 }
+
 
 
 
