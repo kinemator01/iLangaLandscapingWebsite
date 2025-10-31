@@ -130,11 +130,11 @@ h2 {
 /* Services */
 .services-section {
   padding: 60px 20px;
-  background-color: #f8f8f8;
+  background-color: #315431;
   text-align: center;
 }
 .services-section h2 {
-  color: #315431; /* or black if you want */
+  color: black; /* or black if you want */
   font-size: 38px;
   margin-bottom: 40px;
 }
@@ -371,4 +371,5 @@ footer.footer-alt {
     max-width: 280px;
   }
 }
+
 
